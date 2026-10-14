@@ -1,321 +1,145 @@
 <!DOCTYPE html>
 <html lang="zh-Hant"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>朋友相交　課文與字音字形講義</title>
+<title>朋友相交　課文與字音字形</title>
 <style>
-:root{--bg:#fbf7ef;--fg:#2b2b2b;--card:#fff;--ac:#c2410c;--ac2:#1d4ed8;--bd:#e5dccb;--hl:#fff3b0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1b19;--fg:#ece7dc;--card:#26241f;--ac:#fb923c;--ac2:#93c5fd;--bd:#3c3a33;--hl:#5a4a00}}
-:root[data-theme="dark"]{--bg:#1c1b19;--fg:#ece7dc;--card:#26241f;--ac:#fb923c;--ac2:#93c5fd;--bd:#3c3a33;--hl:#5a4a00}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:"Noto Serif TC","PMingLiU",serif;line-height:1.7}
-main{max-width:900px;margin:auto;padding:16px}
-h1{color:var(--ac);margin:.2em 0}h2{border-left:6px solid var(--ac);padding-left:10px;margin-top:1.6em}
-.bar{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
-button{font:inherit;padding:6px 14px;border:1px solid var(--ac);background:var(--card);color:var(--ac);border-radius:8px;cursor:pointer}
+:root{--bg:#fbf8f1;--fg:#2b2622;--mut:#7a7168;--card:#fff;--line:#e4dccd;--ac:#b8442f;--ac2:#2f6f6a;--hl:#fff1c2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media screen and (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1a17;--fg:#ece6dc;--mut:#a39a8e;--card:#26231f;--line:#3b362f;--ac:#e8806b;--ac2:#6cc0b8;--hl:#4a3f1c}}
+@media screen{:root[data-theme="dark"]{--bg:#1c1a17;--fg:#ece6dc;--mut:#a39a8e;--card:#26231f;--line:#3b362f;--ac:#e8806b;--ac2:#6cc0b8;--hl:#4a3f1c}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "Noto Serif TC","PingFang TC","Microsoft JhengHei",serif}
+main{max-width:860px;margin:auto;padding:16px}
+h1{font-size:1.8rem;margin:.6em 0 .2em}
+h2{font-size:1.3rem;border-left:6px solid var(--ac);padding-left:.5em;margin:2em 0 .6em}
+h3{font-size:1.1rem;color:var(--ac2);margin:1.6em 0 .4em}
+.sub{color:var(--mut);margin:0 0 .8em}
+button{font:inherit;font-size:.9rem;padding:.3em .9em;border:1px solid var(--ac);background:var(--card);color:var(--ac);border-radius:999px;cursor:pointer;margin:0 .4em .4em 0}
 button.on{background:var(--ac);color:#fff}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 14px;margin:10px 0}
-.g{break-inside:avoid}
-.g h3{margin:0 0 4px;font-size:1.5em;color:var(--ac2)}
-.wrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%}
-td,th{border:1px solid var(--bd);padding:5px 8px;vertical-align:top}
-th{background:var(--hl)}
-.p{white-space:nowrap;color:var(--ac);font-weight:700}
-.m{background:var(--hl)}
-.cover .m{color:transparent;cursor:pointer;user-select:none}
-.cover .m.show{color:inherit}
-.q{min-height:2.6em;border-bottom:1px solid var(--fg);margin:6px 0}
-ul{margin:.3em 0}
-@media print{
-:root{--bg:#fff;--fg:#000;--card:#fff;--bd:#999;--hl:#eee;--ac:#000;--ac2:#000}
-.bar{display:none}main{max-width:none;padding:0}.cover .m{color:transparent}
-.card{border-radius:0}h2{break-after:avoid}}
-.opts{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.opt{min-width:5em}.opt.ok{background:#16a34a;color:#fff;border-color:#16a34a}.opt.no{background:#dc2626;color:#fff;border-color:#dc2626}.fb{min-height:1.4em;font-weight:700}a{text-decoration:none}</style></head><body><main>
-<h1>朋友相交　課文與字音字形講義（互動版）</h1>
-<p>國文 1 上 第八課。先整理結構與課文重點，再依形近字分類記字音字形，最後完成課文問答。</p>
-<div class="bar"><button id="cv">遮住釋義（自我測驗）</button><a href="static.html"><button>講義版（列印）</button></a><a href="pengyou-handout.docx"><button>下載 Word</button></a></div>
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.6em 1em;margin:.8em 0}
+.card p{margin:.3em 0}.note{font-size:.88rem;color:var(--mut);line-height:1.7}.rh{font-size:.9rem;color:var(--ac)}
+.n{display:inline-block;background:var(--ac);color:#fff;border-radius:50%;width:1.6em;height:1.6em;line-height:1.6em;text-align:center;font-size:.8rem;margin-right:.4em}
+.wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:560px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:.3em .6em;font-size:.95rem;line-height:1.6;vertical-align:middle}
+th{background:var(--hl)}td.c{font-size:1.8rem;text-align:center;width:3em}td.y{color:var(--ac);white-space:nowrap}
+.mask .m:not(.on){background:var(--line);color:transparent;cursor:pointer;border-radius:4px;user-select:none}
+.q{margin:1em 0;padding:.6em 1em;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.q .o{display:block;width:100%;text-align:left;margin:.3em 0;border-radius:8px}
+.ok{background:#2f8f5b!important;color:#fff!important;border-color:#2f8f5b!important}.ng{background:#c0392b!important;color:#fff!important;border-color:#c0392b!important}
+#sc{font-weight:bold;color:var(--ac2)}
+@media print{.np{display:none!important}body{font-size:13px}.mask .m:not(.on){background:none;color:inherit}h2{break-after:avoid}tr,.card{break-inside:avoid}}
+</style><script src="/assets/page-qr.js" defer></script></head><body><main><!-- page-qr --><style>.pqr{float:right;width:104px;margin:0 0 8px 14px;text-align:center;font:12px/1.4 "Noto Sans TC",sans-serif;color:inherit}.pqr svg{display:block;width:100%;height:auto;background:#fff;border-radius:6px}@media print{#qr-fab{display:none!important}}</style><div class="pqr" title="https://guwen-site.charyvalis.workers.dev/courses/book1/l08-pengyou/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41" class="segno"><path fill="#fff" d="M0 0h41v41h-41z"/><path class="qrline" stroke="#000" d="M2 2.5h7m4 0h2m1 0h5m3 0h4m1 0h2m1 0h7m-37 1h1m5 0h1m2 0h1m9 0h1m3 0h2m2 0h2m1 0h1m5 0h1m-37 1h1m1 0h3m1 0h1m2 0h3m2 0h4m1 0h2m1 0h2m2 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m2 0h2m1 0h1m2 0h2m1 0h1m3 0h3m1 0h2m2 0h1m1 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m4 0h1m3 0h2m1 0h1m2 0h1m1 0h1m3 0h2m1 0h1m1 0h3m1 0h1m-37 1h1m5 0h1m1 0h1m2 0h2m6 0h2m1 0h1m1 0h5m1 0h1m5 0h1m-37 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-28 1h1m1 0h4m2 0h3m1 0h1m1 0h1m4 0h1m-29 1h1m2 0h1m1 0h2m1 0h1m1 0h1m3 0h1m1 0h3m1 0h1m1 0h1m2 0h1m3 0h1m1 0h1m-29 1h1m4 0h2m3 0h7m1 0h1m2 0h2m3 0h2m5 0h1m-33 1h1m1 0h1m1 0h2m1 0h1m1 0h3m3 0h1m5 0h1m3 0h3m1 0h1m1 0h2m-36 1h1m1 0h2m3 0h1m1 0h2m1 0h2m1 0h1m1 0h15m-33 1h4m1 0h2m2 0h1m1 0h1m1 0h1m1 0h3m3 0h1m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m1 0h2m-33 1h1m2 0h1m1 0h3m1 0h1m2 0h1m1 0h5m1 0h2m4 0h2m2 0h1m1 0h1m-37 1h1m1 0h1m2 0h2m1 0h1m3 0h2m2 0h1m3 0h1m1 0h3m1 0h1m4 0h2m1 0h1m1 0h1m-36 1h1m5 0h1m1 0h1m2 0h3m1 0h1m3 0h2m3 0h4m1 0h1m1 0h1m3 0h1m-36 1h4m1 0h1m1 0h1m1 0h3m1 0h1m1 0h1m3 0h1m3 0h1m2 0h1m1 0h3m1 0h3m-36 1h3m4 0h1m3 0h2m1 0h2m3 0h1m3 0h3m2 0h1m1 0h1m1 0h2m1 0h2m-35 1h5m2 0h1m2 0h3m2 0h4m8 0h3m3 0h2m-37 1h1m3 0h1m2 0h1m1 0h1m2 0h1m2 0h3m1 0h5m2 0h1m4 0h2m1 0h2m-33 1h5m2 0h1m3 0h1m4 0h1m1 0h1m3 0h1m1 0h2m1 0h1m1 0h2m1 0h1m-34 1h3m3 0h6m2 0h3m1 0h1m3 0h2m4 0h2m1 0h1m1 0h2m-37 1h3m1 0h1m1 0h1m1 0h2m1 0h1m4 0h1m1 0h2m1 0h2m2 0h2m2 0h1m5 0h2m-35 1h2m3 0h1m1 0h1m5 0h2m1 0h1m6 0h2m1 0h3m4 0h2m-37 1h3m2 0h2m6 0h2m1 0h1m1 0h1m6 0h1m1 0h4m2 0h1m2 0h1m-34 1h2m2 0h2m1 0h6m1 0h2m3 0h1m1 0h2m2 0h3m2 0h4m-37 1h1m3 0h5m1 0h1m3 0h3m1 0h1m1 0h1m1 0h2m1 0h2m3 0h4m2 0h1m-36 1h4m5 0h2m4 0h4m1 0h2m1 0h2m1 0h1m2 0h2m3 0h1m-36 1h5m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h2m1 0h1m3 0h5m1 0h3m-29 1h1m2 0h3m2 0h2m3 0h8m3 0h2m2 0h1m-37 1h7m3 0h1m1 0h1m3 0h2m2 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h2m1 0h2m-37 1h1m5 0h1m1 0h1m1 0h2m2 0h2m3 0h3m1 0h1m2 0h1m1 0h1m3 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m5 0h1m1 0h1m2 0h1m1 0h1m2 0h1m1 0h3m1 0h6m-34 1h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1m3 0h4m1 0h2m5 0h2m2 0h1m-36 1h1m1 0h3m1 0h1m5 0h2m2 0h2m2 0h2m2 0h1m1 0h2m3 0h3m1 0h2m-37 1h1m5 0h1m2 0h4m2 0h1m5 0h5m2 0h1m1 0h2m-32 1h7m1 0h2m6 0h2m1 0h7m2 0h2m3 0h1m1 0h2"/></svg><span>掃描開啟本頁</span></div>
+<h1>朋友相交　課文與字音字形</h1>
+<p class="sub">國文 1 上 第八課。先整理結構與課文重點，再整理詞語、名言與修辭，接著依形近字、多音多義字分類整理字音字形，最後做課文問答與即時測驗。</p>
+<p class="sub np">版本：<a href="./">互動版</a>　<a href="static.html">講義版（可列印）</a>　<a href="pengyou-handout.docx" download>Word 講義下載</a></p>
+<div class="np"><button id="mk">遮住釋義（自我測驗）</button><button onclick="print()">列印講義版</button><a href="pengyou-handout.docx" download><button type="button">下載 Word 講義</button></a>
+<p class="note">遮住後點一下釋義格即可看答案。</p></div>
 
 <h2>一、結構分析</h2>
-<div class="card"><ul>
-<li><b>文體：</b>議論文（論說文）；以第一人稱立場，闡述對於交友一事的觀點。</li>
-<li><b>寫作手法：</b>先以李白詩句引入，再提出全文綱領，分層說明朋友類別與相交原則，最後呼應綱領作結。</li>
-<li><b>全文綱領：</b>「交友之道，貴在誠信」（次段），並於末段再次呼應。</li>
-<li><b>對比手法：</b>以「君子」與「小人」的交友態度對比：君子光明磊落、誠實無欺；小人口蜜腹劍、不擇手段。</li>
-<li><b>擇友之道：</b>引用《論語》：「友直、友諒、友多聞」，提出心目中理想的朋友類型（益者三友）。</li>
-</ul></div>
+<div class="card">
+<p><b>文體：</b>議論文（論說文）；以第一人稱立場，闡述對於交友一事的觀點。</p>
+<p><b>寫作手法：</b>先以李白詩句引入，再提出全文綱領，分層說明朋友類別與相交原則，最後呼應綱領作結。</p>
+<p><b>全文綱領：</b>「交友之道，貴在誠信」（次段），並於末段再次呼應。</p>
+<p><b>對比手法：</b>以「君子」與「小人」的交友態度對比：君子光明磊落、誠實無欺；小人口蜜腹劍、不擇手段。</p>
+<p><b>擇友之道：</b>引用《論語》：「友直、友諒、友多聞」，提出心目中理想的朋友類型（益者三友）。</p>
+</div>
+<h3>段落結構</h3>
 <div class="wrap"><table><tr><th>段落</th><th>作用</th><th>內容</th></tr>
-<tr><td>首段</td><td>前言</td><td>引用李白詩展開，強調交友重誠信。</td></tr>
-<tr><td>次段</td><td>全文綱領</td><td>提出「交友之道，貴在誠信」。</td></tr>
-<tr><td>第三段</td><td>朋友類別</td><td>提出朋友類別，說明朋友相交，貴在知心。</td></tr>
-<tr><td>第四段</td><td>相交原則①</td><td>本質，指品格。</td></tr>
-<tr><td>第五段</td><td>相交原則②</td><td>坦誠相待。</td></tr>
-<tr><td>第六段</td><td>相交原則③</td><td>「君子」與「小人」的朋友類型。</td></tr>
-<tr><td>第七段</td><td>相交原則④</td><td>自己的擇友之道。</td></tr>
-<tr><td>末段</td><td>總結</td><td>呼應綱領作結，期望能以「誠信」多結善緣。</td></tr>
+<tr><td class="y">首段</td><td>前言</td><td>引用李白詩展開，強調交友重誠信。</td></tr>
+<tr><td class="y">次段</td><td>全文綱領</td><td>提出「交友之道，貴在誠信」。</td></tr>
+<tr><td class="y">第三段</td><td>朋友類別</td><td>提出朋友類別，說明朋友相交，貴在知心。</td></tr>
+<tr><td class="y">第四段</td><td>相交原則①</td><td>本質，指品格。</td></tr>
+<tr><td class="y">第五段</td><td>相交原則②</td><td>坦誠相待。</td></tr>
+<tr><td class="y">第六段</td><td>相交原則③</td><td>「君子」與「小人」的朋友類型。</td></tr>
+<tr><td class="y">第七段</td><td>相交原則④</td><td>自己的擇友之道。</td></tr>
+<tr><td class="y">末段</td><td>總結</td><td>呼應綱領作結，期望能以「誠信」多結善緣。</td></tr>
 </table></div>
-<div class="card"><b>全文綱領：「交友之道，貴在（　　　　　）」。</b></div>
-<h2>二、課文重點</h2>
-<div class="card g"><h3 style="font-size:1.1em">（一）〈黃鶴樓送孟浩然之廣陵〉賞析</h3><p>〈黃鶴樓送孟浩然之廣陵〉是寓情於景的送別詩（絕句：每首四句，有五言、七言之分；第二、四句必須押韻，第一句可押可不押）。</p><div class="wrap"><table><tr><th>詩句</th><th>賞析</th></tr>
-<tr><td>故人西辭黃鶴樓</td><td>點出送別的對象（孟浩然）與送別的地點（黃鶴樓）。</td></tr>
-<tr><td>煙花三月下揚州</td><td>點出送別的時間（暮春三月，農曆一至三月為春季）及友人前往的地點（揚州）。</td></tr>
-<tr><td>孤帆遠影碧山盡</td><td>「帆」借代船；「孤」寫遠行的友人（孟浩然），也寫送行的詩人（李白），點出離情依依，更顯友情真摯。李白目光追逐帆影，直到模糊消失，凸顯痴立惆悵之情。</td></tr>
-<tr><td>唯見長江天際流</td><td>以滔滔不絕的長江水，象徵連綿不絕的離愁；既是眼前景，也藉美景反襯無法與好友共賞、卻要離別的惆悵心情。</td></tr>
-</table></div></div>
-<div class="card g"><h3 style="font-size:1.1em">（二）課文友情相關句子</h3><ul><li><b>「相交滿天下，知心有幾人？得一知己，此生可以無憾」</b><ul><li>＝「人生貴相知，何必金與錢？」（李白）</li><li>＝「萬兩黃金容易得，知心一個也難求」（曹雪芹）</li><li>＝「天下有一知己，可以不恨」（林語堂）</li></ul></li><li><b>「君子之交淡如水」</b><ul><li>＝「謂賢者之交誼，平淡如水，不尚虛華」（莊子）</li><li>＝「朋友的可貴，在於自由；最不可取，在於霸佔和強求」（三毛）</li></ul></li><li><b>「交友之道，貴在誠信」</b><ul><li>＝「與朋友交，言而有信」（子夏）</li><li>＝「吾日三省吾身……與朋友交而不信乎？」（曾子，《論語》）</li></ul></li></ul></div>
-<div class="card g"><h3 style="font-size:1.1em">（三）君子與小人（對比手法）</h3><div class="wrap"><table><tr><th>類型</th><th>特質</th><th>概括</th></tr>
-<tr><td>君子</td><td>坦蕩磊落，講究誠信，不逾規矩；言行舉止有若日月之蝕，人人得而見之。</td><td class="m">誠實無欺、光明磊落</td></tr>
-<tr><td>小人</td><td>綢繆甜蜜，遮掩偽飾，一心只求目的的達成，無所不用其極，誠信俱可拋。</td><td class="m">口蜜腹劍、不擇手段</td></tr>
-</table></div></div>
-<h2>三、字音字形整理（依形近字分類）</h2>
-<div id="zx"></div>
-<h2>四、成語與詞語</h2>
-<div class="card"><ul>
-<li><b>休戚與共</b>：彼此之間的幸福和禍患都共同承受。＝同甘共苦。</li>
-<li><b>咫尺天涯</b>：比喻相距雖近，卻有如相隔天涯一般，無緣相見。（咫ㄓˇ）</li>
-<li><b>莫逆於心</b>：心中沒有抵觸；指情感一致，心意相投。</li>
-<li><b>歷久彌新</b>：經過長久的時日，不但沒有衰敗、陳舊，反而更新、更好；指禁得起時間的考驗。</li>
-<li><b>欲蓋彌彰</b>：想要遮蓋掩飾過失，反而使過失更加明顯。</li>
-<li><b>無所不用其極</b>：用盡一切手段；＝不擇手段。</li>
-<li><b>潛移默化</b>：人的思想、性格或習慣，在不知不覺中受到影響而轉變。＝耳濡目染。</li>
-<li><b>浩浩蕩蕩</b>：水勢盛大壯闊的樣子。＝浩浩湯湯。</li>
-<li><b>話不投機半句多</b>：與人交談，意見不合，連半句話也嫌多；小人與人交往，常掩飾欺騙，帶有目的。</li>
-</ul></div>
-<h2>五、修辭整理</h2>
-<div class="card g"><div class="wrap"><table><tr><th>修辭</th><th>例句</th></tr>
-<tr><td>設問（提問）</td><td>你怎麼來看待朋友的呢？</td></tr>
-<tr><td>排比</td><td>有的只是點頭之交，平淡而疏離；有的是同好……；有的可以憂戚與共……</td></tr>
-<tr><td>引用</td><td>「相交滿天下，知心有幾人？」「君子之交淡如水」「友直、友諒、友多聞」</td></tr>
-<tr><td>譬喻</td><td>真摯的情誼也有如長江之水，浩浩蕩蕩，沒有止盡。／有若日月之蝕，人人得而見之。</td></tr>
-<tr><td>映襯（對比）</td><td>「君子」坦蕩磊落、講究誠信；「小人」綢繆甜蜜、無所不用其極。</td></tr>
-<tr><td>借代</td><td>「帆」借代船。</td></tr>
-</table></div></div>
-<h2>六、課文問答</h2>
-<div class="card"><b>1. 李白於〈黃鶴樓送孟浩然之廣陵〉一詩中並未直接道出離愁，從詩中何處可看出他對朋友遠行的依依不捨之情？請加以說明。</b>
-<div class="q"></div><div class="q"></div></div>
-<div class="card"><b>2. 「友直」「友諒」「友多聞」這三種類型的朋友，你最喜歡何者？除此之外，你還喜歡結交哪種類型的朋友？請說明理由。</b>
-<div class="q"></div><div class="q"></div></div>
-<div class="card"><b>3. 「心中有所求」這句話意指為何？這種人和別人交朋友，可能會有什麼結果？</b>
-<div class="q"></div><div class="q"></div></div>
-<div class="card"><b>4. 請寫出「君子」與「小人」交友態度的差異（對比手法）。</b>
-<div class="wrap"><table><tr><th></th><th>君子</th><th>小人</th></tr>
-<tr><td>交友態度</td><td><div class="q"></div></td><td><div class="q"></div></td></tr>
-</table></div></div>
-<h2>七、互動小測驗</h2><div id="quiz"></div></main>
+
+<h2>二、〈黃鶴樓送孟浩然之廣陵〉賞析</h2>
+<p class="note">〈黃鶴樓送孟浩然之廣陵〉是寓情於景的送別詩（絕句：每首四句，有五言、七言之分；第二、四句必須押韻，第一句可押可不押）。</p>
+<div class="wrap"><table><tr><th>詩句</th><th>賞析</th></tr>
+<tr><td class="y"><b>故人西辭黃鶴樓</b></td><td>點出送別的對象（孟浩然）與送別的地點（黃鶴樓）。</td></tr>
+<tr><td class="y"><b>煙花三月下揚州</b></td><td>點出送別的時間（暮春三月，農曆一至三月為春季）及友人前往的地點（揚州）。</td></tr>
+<tr><td class="y"><b>孤帆遠影碧山盡</b></td><td>「帆」借代船；「孤」寫遠行的友人（孟浩然），也寫送行的詩人（李白），點出離情依依，更顯友情真摯。李白目光追逐帆影，直到模糊消失，凸顯痴立惆悵之情。</td></tr>
+<tr><td class="y"><b>唯見長江天際流</b></td><td>以滔滔不絕的長江水，象徵連綿不絕的離愁；既是眼前景，也藉美景反襯無法與好友共賞、卻要離別的惆悵心情。</td></tr>
+</table></div>
+
+<h2>三、重點詞語（近義・反義）</h2>
+<div class="wrap"><table><tr><th>詞語</th><th>釋義</th><th>近義</th></tr>
+<tr><td class="y"><b>休戚與共</b></td><td><span class="m">彼此之間的幸福和禍患都共同承受</span></td><td>同甘共苦</td></tr>
+<tr><td class="y"><b>咫尺天涯</b></td><td><span class="m">比喻相距雖近，卻有如相隔天涯一般，無緣相見。（咫ㄓˇ）</span></td><td>—</td></tr>
+<tr><td class="y"><b>莫逆於心</b></td><td><span class="m">心中沒有抵觸；指情感一致，心意相投</span></td><td>—</td></tr>
+<tr><td class="y"><b>歷久彌新</b></td><td><span class="m">經過長久的時日，不但沒有衰敗、陳舊，反而更新、更好；指禁得起時間的考驗</span></td><td>—</td></tr>
+<tr><td class="y"><b>欲蓋彌彰</b></td><td><span class="m">想要遮蓋掩飾過失，反而使過失更加明顯</span></td><td>—</td></tr>
+<tr><td class="y"><b>無所不用其極</b></td><td><span class="m">用盡一切手段</span></td><td>不擇手段</td></tr>
+<tr><td class="y"><b>潛移默化</b></td><td><span class="m">人的思想、性格或習慣，在不知不覺中受到影響而轉變</span></td><td>耳濡目染</td></tr>
+<tr><td class="y"><b>浩浩蕩蕩</b></td><td><span class="m">水勢盛大壯闊的樣子</span></td><td>浩浩湯湯</td></tr>
+<tr><td class="y"><b>話不投機半句多</b></td><td><span class="m">與人交談，意見不合，連半句話也嫌多；小人與人交往，常掩飾欺騙，帶有目的</span></td><td>—</td></tr>
+</table></div>
+
+<h2>四、名言與引用</h2>
+<div class="card"><p><b>「相交滿天下，知心有幾人？得一知己，此生可以無憾」</b></p><p class="note">＝「人生貴相知，何必金與錢？」（李白）</p><p class="note">＝「萬兩黃金容易得，知心一個也難求」（曹雪芹）</p><p class="note">＝「天下有一知己，可以不恨」（林語堂）</p></div>
+<div class="card"><p><b>「君子之交淡如水」</b></p><p class="note">＝「謂賢者之交誼，平淡如水，不尚虛華」（莊子）</p><p class="note">＝「朋友的可貴，在於自由；最不可取，在於霸佔和強求」（三毛）</p></div>
+<div class="card"><p><b>「交友之道，貴在誠信」</b></p><p class="note">＝「與朋友交，言而有信」（子夏）</p><p class="note">＝「吾日三省吾身……與朋友交而不信乎？」（曾子，《論語》）</p></div>
+
+<h2>五、君子與小人（對比手法）</h2>
+<div class="wrap"><table><tr><th>類型</th><th>特質</th><th>概括</th></tr>
+<tr><td class="y"><b>君子</b></td><td>坦蕩磊落，講究誠信，不逾規矩；言行舉止有若日月之蝕，人人得而見之。</td><td><span class="m">誠實無欺、光明磊落</span></td></tr>
+<tr><td class="y"><b>小人</b></td><td>綢繆甜蜜，遮掩偽飾，一心只求目的的達成，無所不用其極，誠信俱可拋。</td><td><span class="m">口蜜腹劍、不擇手段</span></td></tr>
+</table></div>
+<h3>修辭整理</h3>
+<div class="wrap"><table><tr><th>修辭</th><th>例句</th></tr>
+<tr><td class="y">設問（提問）</td><td>你怎麼來看待朋友的呢？</td></tr>
+<tr><td class="y">排比</td><td>有的只是點頭之交，平淡而疏離；有的是同好……；有的可以憂戚與共……</td></tr>
+<tr><td class="y">引用</td><td>「相交滿天下，知心有幾人？」「君子之交淡如水」「友直、友諒、友多聞」</td></tr>
+<tr><td class="y">譬喻</td><td>真摯的情誼也有如長江之水，浩浩蕩蕩，沒有止盡。／有若日月之蝕，人人得而見之。</td></tr>
+<tr><td class="y">映襯（對比）</td><td>「君子」坦蕩磊落、講究誠信；「小人」綢繆甜蜜、無所不用其極。</td></tr>
+<tr><td class="y">借代</td><td>「帆」借代船。</td></tr>
+</table></div>
+
+<h2>六、字音字形整理（依形近字、多音多義字分類）</h2>
+<div id="tb"></div>
+
+<h2>七、課文問答</h2>
+<div class="card"><p><b>1. 李白於〈黃鶴樓送孟浩然之廣陵〉一詩中並未直接道出離愁，從詩中何處可看出他對朋友遠行的依依不捨之情？請加以說明。</b></p><p class="note">答：</p></div>
+<div class="card"><p><b>2. 「友直」「友諒」「友多聞」這三種類型的朋友，你最喜歡何者？除此之外，你還喜歡結交哪種類型的朋友？請說明理由。</b></p><p class="note">答：</p></div>
+<div class="card"><p><b>3. 「心中有所求」這句話意指為何？這種人和別人交朋友，可能會有什麼結果？</b></p><p class="note">答：</p></div>
+<div class="card"><p><b>4. 請寫出「君子」與「小人」交友態度的差異（對比手法）。</b></p><p class="note">答：</p></div>
+
+<h2 class="np">八、即時選擇題</h2>
+<div class="np"><p>共 <span id="tot">0</span> 題　已作答 <span id="an">0</span>　答對 <span id="rt">0</span>　<button id="rq">重新出題</button></p><div id="qs"></div></div>
+</main>
 
 <script>
-var D=`#拙 茁
-ㄓㄨㄛˊ|笨「拙」、手「拙」、弄巧成「拙」|愚笨、不靈活的（形）；弄巧成拙：本想取巧，卻反而敗事，有枉費心機的意思
-ㄓㄨㄛˊ|「拙」見、「拙」作、「拙」計|謙稱自己的（形）
-ㄓㄨㄛˊ|古「拙」、樸「拙」|古樸的、未加修飾的（形）
-ㄓㄨㄛˊ|勤能補「拙」|遲鈍、愚笨（名）；勤奮努力可以彌補天資的不足
-ㄓㄨㄛˊ|「茁」壯|成長（形）
-#煙 湮
-ㄧㄢ|炊「煙」|物質燃燒時所產生的氣狀物（名）
-ㄧㄢ|雲「煙」、「煙」嵐|山川間像煙一樣的水氣（名）
-ㄧㄢ|油「煙」|煙氣所凝結而成的黑灰，常用以製墨（名）
-ㄧㄣ|「湮」沒無聞、古蹟「湮」滅、「湮」滅證據|沉沒、埋沒（動）
-#故
-ㄍㄨˋ|無緣無「故」、不知何「故」|原因、理由（名）
-ㄍㄨˋ|事「故」、變「故」|意外的事情、事件（名）
-ㄍㄨˋ|一見如「故」、沾親帶「故」|好友、舊識（名）
-ㄍㄨˋ|溫「故」知新|已學得的知識學問（名）；指複習學過的知識，而獲得新的知識、體會
-ㄍㄨˋ|身「故」、病「故」|死亡（動）
-ㄍㄨˋ|「故」總統|死去的（形）
-ㄍㄨˋ|「故」鄉、「故」國、「故」交|原來的、以前的（形）
-ㄍㄨˋ|明知「故」犯|有意地、存心地（副）；明明知道是錯的，卻故意去違犯
-ㄍㄨˋ|「故」弄玄虛|有意地、存心地（副）；賣弄玄妙虛無的道理
-#之
-ㄓ|送孟浩然「之」廣陵|往、去（動）
-ㄓ|昂首觀「之」、使「之」沖煙飛鳴|代，指蚊子
-ㄓ|項為「之」強|代，指抬頭看蚊子這件事情
-ㄓ|觀「之」，興正濃|代，指「二蟲鬥草間」這件事情
-ㄓ|驅「之」別院|代，指癩蛤蟆
-ㄓ|心「之」所向|助詞，無義
-ㄓ|物外「之」趣|的（助詞）
-ㄓ|當「之」罰金、上使立誅「之」、屬「之」廷尉|代，指犯人
-ㄓ|今法如此而更重「之」|代，指罪
-ㄓ|唯陛下察「之」|代，指這件事
-ㄓ|久「之」|用於強調或補足語氣（助詞）
-ㄓ|天下「之」平也|的（助詞）
-#繆 謬 寥
-ㄇㄡˊ|未雨綢「繆」、徹彼桑土，綢「繆」牖戶|纏縛。引申為修補，使之堅固（動）
-ㄇㄡˊ|小人則綢「繆」甜蜜|親密、纏綿（動）
-ㄇㄧㄡˋ|「繆」論|錯誤的。通「謬」（形）
-ㄇㄧㄠˋ|「繆」先生|姓
-ㄇㄧㄡˋ|荒「謬」|不實的、荒唐的（形）
-ㄇㄧㄡˋ|差以毫釐，「謬」以千里|差失（動）；開始相差雖然很微小，結果卻造成極大的錯誤
-ㄌㄧㄠˊ|「寥」寥無幾|數量極少
-ㄌㄧㄠˊ|「寥」若晨星|稀疏的（形）；稀少得像早晨的星星，形容數量稀少
-ㄌㄧㄠˊ|「寥」落古行宮，宮花寂寞紅、寂「寥」|冷清的、寂靜的（形）
-#戮 膠
-ㄌㄨˋ|殺「戮」|刑殺（動）
-ㄐㄧㄠ|「膠」合|黏合（動）
-ㄐㄧㄠ|「膠」鬲|姓氏（名）
-#及
-ㄐㄧˊ|推己「及」人、「及」第、遙不可「及」|到、到達（動）；推己及人：將心比心，設身處地替別人著想
-ㄐㄧˊ|來得「及」、「及」時、「及」早搶購|趕得上（動）
-ㄐㄧˊ|迅雷不「及」掩耳|比喻行動迅速，令人防備不及
-ㄐㄧˊ|不「及」於你、不「及」汪倫送我情|比得上（動）
-ㄐㄧˊ|涉「及」利害、波「及」|牽涉、發生關係（動）
-ㄐㄧˊ|言不「及」義|只說些無聊話，沒有談到正經的道理
-ㄐㄧˊ|兄終弟「及」|古君位傳襲制度中兄弟相傳（名）；舊時指哥哥死了，由弟弟接替爵位
-#盡
-ㄐㄧㄣˋ|「盡」向地面攫來、「盡」在不言中、應有「盡」有、「盡」棄前嫌、二蟲「盡」為所吞、不「盡」相同|完全，全部（副）
-ㄐㄧㄣˋ|無窮無「盡」、取之不「盡」、春蠶到死絲方「盡」，蠟炬成灰淚始乾、消滅殆「盡」、不「盡」長江滾滾來|完結、終止（動）
-ㄐㄧㄣˋ|竭「盡」所能、「盡」其所長、「盡」忠報國|全部用出，竭力、努力完成（動）
-ㄐㄧㄣˋ|孤帆遠影碧山「盡」、白日依山「盡」|隱沒（動）
-ㄐㄧㄣˋ|自「盡」|死亡（動）
-ㄐㄧㄣˋ|詳「盡」|完備的（形）
-ㄐㄧㄣˋ|「盡」善「盡」美|極端、達到極限（副）
-#盛
-ㄔㄥˊ|「盛」飯、「盛」湯|用容器裝東西（動）
-ㄕㄥˋ|旺「盛」、茂「盛」、興「盛」、牡丹「盛」開、「盛」氣凌人|興旺的、繁茂的（形）
-ㄕㄥˋ|「盛」大、「盛」舉、「盛」事|大規模的（形）
-ㄕㄥˋ|「盛」情、「盛」意|濃厚的（形）
-ㄕㄥˋ|「盛」怒、「盛」誇、「盛」讚、「盛」愛|極，表程度之深（副）
-#艘 颼 搜
-ㄙㄡ|一「艘」軍艦／船|量詞。計算船隻、艦艇的單位（名）
-ㄙㄡ|「搜」身|檢查、檢點（動）
-ㄙㄡ|「搜」集|找尋、尋求（動）
-ㄙㄡ|啾啾「颼颼」，吟嘯相求|形容風吹的聲音（名）
-ㄙㄡ|冷「颼颼」|寒冷的樣子（形）
-ㄙㄠ|雨聲「颼颼」|形容雨聲（形）
-#隱 穩 癮
-ㄧㄣˇ|「隱」姓埋名|藏匿（動）
-ㄧㄣˇ|「隱」情、「隱」疾|潛藏不露的（形）
-ㄧㄣˇ|毒「癮」、酒「癮」|成為習慣而不易戒除的嗜好或癖好（名）
-ㄨㄣˇ|安「穩」、「穩」如泰山|固定不動搖的、安全的（形）
-ㄨㄣˇ|十拿九「穩」、「穩」當|妥當的、妥貼的（形）
-ㄨㄣˇ|「穩」健、「穩」重|沉著不輕浮的（形）
-ㄨㄣˇ|「穩」住情緒|控制、使安定（動）
-#蕩 盪 燙
-ㄉㄤˋ|坦「蕩」|平坦的（形）
-ㄉㄤˋ|街頭遊「蕩」|閒逛（動）
-ㄉㄤˋ|從流飄「蕩」、「蕩」舟|搖動、擺動（動）
-ㄉㄤˋ|「蕩」然無存|毀壞（動）
-ㄉㄤˋ|傾家「蕩」產|清除、洗除、使殆盡（動）
-ㄉㄤˋ|浪「蕩」子、放「蕩」|放縱不受拘束的（形）
-ㄉㄤˋ|「盪」鞦韆|搖動、擺動（動）
-ㄊㄤˋ|「燙」手山芋|被高熱的東西或火所傷（名）；比喻棘手且各方皆不願接辦的事
-#漫 慢 幔 曼 蔓 謾
-ㄇㄢˋ|其流波「漫」|水滿而外溢（動）
-ㄇㄢˋ|「漫」不經心、「漫」卷詩書喜欲狂|隨便地、胡亂地（副）
-ㄇㄢˋ|浪「漫」、散「漫」|放縱不受拘束的（形）
-ㄇㄢˋ|「漫」山遍野、「漫」天大霧|遍布的、充滿的（形）
-ㄇㄢˋ|「漫漫」長夜、還望顧舊鄉，長路「漫」浩浩|長的、遠的（形）
-ㄇㄢˋ|「慢」車、動作「慢」|速度低的、不快的（形）
-ㄇㄢˋ|傲「慢」、輕「慢」|驕傲的、不禮貌的（動）
-ㄇㄢˋ|且「慢」生氣|從緩地、稍緩地（副）
-ㄇㄢˋ|窗「幔」、布「幔」|布幕、帳幕（名）
-ㄇㄢˋ|妙歌「曼」舞|美的、柔美的（形）
-ㄇㄢˋ|「蔓」延|延伸、滋長（動）
-ㄇㄢˋ|藤「蔓」|藤本或蔓性植物細長而能攀繞他物的莖（名）
-ㄇㄢˋ|「謾」罵|任意、隨便，通「漫」。亦作「漫罵」（動）
-#逆
-ㄋㄧˋ|莫「逆」於心|心中沒有抵觸；指情感一致，心意相投
-ㄋㄧˋ|忤「逆」、忠言「逆」耳、不立異以為高，不「逆」情以干譽|違背、不順從（動）
-ㄋㄧˋ|身處「逆」境|不順的（形）
-ㄋㄧˋ|批其「逆」鱗|倒出的（形）；逆鱗，指龍喉下倒生的鱗片。批逆鱗引申為直言諍諫
-ㄋㄧˋ|倒行「逆」施|反、倒（副）；不遵常理行事。後比喻違背社會俗尚，胡作非為的罪惡行徑
-ㄋㄧˋ|討「逆」|背叛者（名）
-#撼 憾 感
-ㄏㄢˋ|「撼」動、震「撼」天地|搖動（動）
-ㄏㄢˋ|缺「憾」、「憾」事|心中的怨恨或不完滿的感覺（名）
-ㄏㄢˋ|遺「憾」、抱「憾」而終|悔恨的、不滿意的（動）
-ㄍㄢˇ|百「感」交集|受到外來刺激所引起的情緒反應（名）
-#質
-ㄓˊ|文「質」彬彬|樸實的本性（名）
-ㄓˊ|資「質」|人的天性稟賦（名）
-ㄓˊ|特「質」、品「質」|事物的根本、特性（名）
-ㄓˊ|「質」問犯人|詰問（動）
-ㄓˊ|是故「質」的張而弓矢至焉|箭靶、標的（名）
-ㄓˋ|「質」押|用財物或人作保證以為抵押（動）
-ㄓˋ|人「質」|被抵押的人或物（名）
-#彌
-ㄇㄧˊ|「彌」補|填補（動）
-ㄇㄧˊ|日久「彌」新|更加（副）；經過長久的時日，不但沒有衰敗、陳舊，反而更新、更好。指禁得起時間的考驗
-ㄇㄧˊ|欲蓋「彌」彰|更加（副）；想要遮蓋掩飾反而更加顯明。如：「大家原本只是懷疑他而已，但他忙於辯解的樣子反而是欲蓋彌彰，不打自招。」
-ㄇㄧˊ|「彌」足珍貴|更加（副）
-ㄇㄧˊ|煙霧「彌」漫|遍布地（副）
-ㄇㄧˊ|「彌」久|久地（副）
-#歷 曆
-ㄌㄧˋ|「歷」史、「歷」屆|過去、已經過的（形）
-ㄌㄧˋ|「歷」盡滄桑、「歷」久彌新、「歷」劫|經過（動）
-ㄌㄧˋ|「歷歷」在目、往事「歷歷」、晴川「歷歷」漢陽樹，春草萋萋鸚鵡洲|分明的、清晰的（形）
-ㄌㄧˋ|學「歷」、履「歷」表|過去的經驗（名）
-ㄌㄧˋ|行事「曆」、日「曆」|記載年、月、日、節氣等的書冊（名）
-ㄌㄧˋ|周過其「曆」，秦不及期|年代、壽命（名）
-#癒 渝 揄 逾 踰 瑜
-ㄩˋ|治「癒」、痊「癒」、病「癒」|病好了。通「愈」、「瘉」（動）
-ㄩˊ|信守不「渝」、此情不「渝」|變更、改變（動）
-ㄩˊ|揶「揄」|嘲笑、戲弄（動）
-ㄩˊ|年「逾」六十、「逾」牆、「逾」時不候|越過、超過。通「踰」（動）
-ㄩˊ|「踰」矩、「踰」越|越過、超過。通「逾」（動）
-ㄩˊ|瑕不掩「瑜」|美玉（名）；比喻事物雖有缺點，卻無損其整體的完美
-ㄩˊ|握瑾懷「瑜」|美玉（名）；比喻懷有高貴的美德與才能
-#覬 覦 愉 喻
-ㄐㄧˋ ㄩˊ|「覬覦」|企求、冀求（動）；希望得到不該擁有的東西
-ㄩˊ|歡「愉」、「愉」悅|快樂的，高興的（形）
-ㄩˋ|曉「喻」、告「喻」|告知、說明。通「諭」（動）
-ㄩˋ|家「喻」戶曉、低頭獨長歎，此歎無人「喻」、不言而「喻」|知道、明白（動）；家喻戶曉：家家戶戶都知道，形容事情、名聲傳布極廣；不言而喻：事理淺顯，不待說明即可曉悟
-ㄩˋ|譬「喻」、比「喻」|比方（動）
-#庵 掩 淹 醃 奄
-ㄢ|尼姑「庵」|僧尼禮佛的小寺廟（名）
-ㄧㄢˇ|虛「掩」房門|關閉（動）
-ㄧㄢˇ|遮「掩」、「掩」飾、「掩」耳盜鈴|遮蔽（動）；掩耳盜鈴：比喻自欺欺人
-ㄧㄢ|水「淹」及膝|浸漬（動）
-ㄧㄢ|「醃」漬水果|用鹽、糖、酒等調味料浸漬食物（動）
-ㄧㄢˇ|「奄奄」一息|氣息微弱將絕；僅存微弱的一口氣。形容生命或事物已到了最後時刻
-#距 鉅 拒 矩 炬
-ㄐㄩˋ|相「距」|相隔、相離（動）
-ㄐㄩˋ|「距」離|相隔的長度（名）
-ㄐㄩˋ|「鉅」變、「鉅」款|大的。通「巨」（形）
-ㄐㄩˋ|來者不「拒」、「拒」絕|不接受（動）
-ㄐㄩˋ|抗「拒」、「拒」敵|抵抗、抵禦（動）
-ㄐㄩˇ|循規蹈「矩」|法則、常規（名）；遵守禮法，不踰越法度
-ㄐㄩˋ|火「炬」|火把（名）
-ㄐㄩˋ|目光如「炬」|火把（名）；比喻見事透澈，識見遠大
-#緘 咸 箴
-ㄐㄧㄢ|三「緘」其口|閉（動）；言語謹慎或不說話
-ㄐㄧㄢ|一「緘」幽信自襄陽，上報先生去歲亡|量詞。計算信件的單位（名）
-ㄐㄧㄢ|開「緘」見手札，一紙十三行|書信（名）
-ㄒㄧㄢˊ|老少「咸」宜|都、皆、全（副）
-ㄓㄣ|「箴」言|規戒、勸諫（動）`;
-var h="",open=false;
-D.split("\n").forEach(function(l){
- if(l[0]=="#"){if(open)h+="</table></div></div>";
-  h+='<div class="card g"><h3>'+l.slice(1)+'</h3><div class="wrap"><table><tr><th>讀音</th><th>詞語</th><th>釋義</th></tr>';open=true;return}
- var a=l.split("|");
- h+="<tr><td class='p'>"+a[0]+"</td><td>"+a[1]+"</td><td class='m'>"+a[2]+"</td></tr>"});
-if(open)h+="</table></div></div>";
-document.getElementById("zx").innerHTML=h;
-var cv=document.getElementById("cv");
-cv.onclick=function(){var on=document.body.classList.toggle("cover");cv.classList.toggle("on",on);cv.textContent=on?"顯示全部釋義":"遮住釋義（自我測驗）";document.querySelectorAll(".m.show").forEach(function(e){e.classList.remove("show")})};
-document.addEventListener("click",function(e){if(e.target.classList.contains("m"))e.target.classList.toggle("show")});
+const G=[["拙・茁",[["拙","ㄓㄨㄛˊ",[["愚笨、不靈活的，形",["笨「拙」、手「拙」、弄巧成「拙」"]],["謙稱自己的，形",["「拙」見、「拙」作、「拙」計"]],["古樸的、未加修飾的，形",["古「拙」、樸「拙」"]],["遲鈍、愚笨，名",["勤能補「拙」"]]]],["茁","ㄓㄨㄛˊ",[["成長，形",["「茁」壯"]]]]],["弄巧成拙：本想取巧，卻反而敗事，有枉費心機的意思。","勤能補拙：勤奮努力可以彌補天資的不足。"]],["煙・湮",[["煙","ㄧㄢ",[["物質燃燒時所產生的氣狀物，名",["炊「煙」"]],["山川間像煙一樣的水氣，名",["雲「煙」、「煙」嵐"]],["煙氣所凝結而成的黑灰，常用以製墨，名",["油「煙」"]]]],["湮","ㄧㄣ",[["沉沒、埋沒，動",["「湮」沒無聞、古蹟「湮」滅、「湮」滅證據"]]]]],[]],["故",[["故","ㄍㄨˋ",[["原因、理由，名",["無緣無「故」、不知何「故」"]],["意外的事情、事件，名",["事「故」、變「故」"]],["好友、舊識，名",["一見如「故」、沾親帶「故」"]],["已學得的知識學問，名",["溫「故」知新"]],["死亡，動",["身「故」、病「故」"]],["死去的，形",["「故」總統"]],["原來的、以前的，形",["「故」鄉、「故」國、「故」交"]],["有意地、存心地，副",["明知「故」犯","「故」弄玄虛"]]]]],["溫故知新：指複習學過的知識，而獲得新的知識、體會。","明知故犯：明明知道是錯的，卻故意去違犯。","故弄玄虛：賣弄玄妙虛無的道理。"]],["之（一詞多義）",[["之","ㄓ",[["往、去，動",["送孟浩然「之」廣陵"]],["代，指蚊子",["昂首觀「之」、使「之」沖煙飛鳴"]],["代，指抬頭看蚊子這件事情",["項為「之」強"]],["代，指「二蟲鬥草間」這件事情",["觀「之」，興正濃"]],["代，指癩蛤蟆",["驅「之」別院"]],["助詞，無義",["心「之」所向"]],["的，助",["物外「之」趣","天下「之」平也"]],["代，指犯人",["當「之」罰金、上使立誅「之」、屬「之」廷尉"]],["代，指罪",["今法如此而更重「之」"]],["代，指這件事",["唯陛下察「之」"]],["用於強調或補足語氣，助",["久「之」"]]]]],[]],["繆・謬・寥",[["繆","ㄇㄡˊ",[["纏縛。引申為修補，使之堅固，動",["未雨綢「繆」、徹彼桑土，綢「繆」牖戶"]],["親密、纏綿，動",["小人則綢「繆」甜蜜"]]]],["繆","ㄇㄧㄡˋ",[["錯誤的。通「謬」，形",["「繆」論"]]]],["繆","ㄇㄧㄠˋ",[["姓",["「繆」先生"]]]],["謬","ㄇㄧㄡˋ",[["不實的、荒唐的，形",["荒「謬」"]],["差失，動",["差以毫釐，「謬」以千里"]]]],["寥","ㄌㄧㄠˊ",[["數量極少",["「寥」寥無幾"]],["稀疏的，形",["「寥」若晨星"]],["冷清的、寂靜的，形",["「寥」落古行宮，宮花寂寞紅、寂「寥」"]]]]],["差以毫釐，謬以千里：開始相差雖然很微小，結果卻造成極大的錯誤。","寥若晨星：稀少得像早晨的星星，形容數量稀少。"]],["戮・膠",[["戮","ㄌㄨˋ",[["刑殺，動",["殺「戮」"]]]],["膠","ㄐㄧㄠ",[["黏合，動",["「膠」合"]],["姓氏，名",["「膠」鬲"]]]]],[]],["及",[["及","ㄐㄧˊ",[["到、到達，動",["推己「及」人、「及」第、遙不可「及」"]],["趕得上，動",["來得「及」、「及」時、「及」早搶購"]],["比喻行動迅速，令人防備不及",["迅雷不「及」掩耳"]],["比得上，動",["不「及」於你、不「及」汪倫送我情"]],["牽涉、發生關係，動",["涉「及」利害、波「及」"]],["只說些無聊話，沒有談到正經的道理",["言不「及」義"]],["古君位傳襲制度中兄弟相傳，名",["兄終弟「及」"]]]]],["推己及人：將心比心，設身處地替別人著想。","兄終弟及：舊時指哥哥死了，由弟弟接替爵位。"]],["盡",[["盡","ㄐㄧㄣˋ",[["完全，全部，副",["「盡」向地面攫來、「盡」在不言中、應有「盡」有、「盡」棄前嫌、二蟲「盡」為所吞、不「盡」相同"]],["完結、終止，動",["無窮無「盡」、取之不「盡」、春蠶到死絲方「盡」，蠟炬成灰淚始乾、消滅殆「盡」、不「盡」長江滾滾來"]],["全部用出，竭力、努力完成，動",["竭「盡」所能、「盡」其所長、「盡」忠報國"]],["隱沒，動",["孤帆遠影碧山「盡」、白日依山「盡」"]],["死亡，動",["自「盡」"]],["完備的，形",["詳「盡」"]],["極端、達到極限，副",["「盡」善「盡」美"]]]]],[]],["盛",[["盛","ㄔㄥˊ",[["用容器裝東西，動",["「盛」飯、「盛」湯"]]]],["盛","ㄕㄥˋ",[["興旺的、繁茂的，形",["旺「盛」、茂「盛」、興「盛」、牡丹「盛」開、「盛」氣凌人"]],["大規模的，形",["「盛」大、「盛」舉、「盛」事"]],["濃厚的，形",["「盛」情、「盛」意"]],["極，表程度之深，副",["「盛」怒、「盛」誇、「盛」讚、「盛」愛"]]]]],[]],["艘・颼・搜",[["艘","ㄙㄡ",[["量詞。計算船隻、艦艇的單位，名",["一「艘」軍艦／船"]]]],["颼","ㄙㄡ",[["形容風吹的聲音，名",["啾啾「颼颼」，吟嘯相求"]],["寒冷的樣子，形",["冷「颼颼」"]]]],["颼","ㄙㄠ",[["形容雨聲，形",["雨聲「颼颼」"]]]],["搜","ㄙㄡ",[["檢查、檢點，動",["「搜」身"]],["找尋、尋求，動",["「搜」集"]]]]],[]],["隱・穩・癮",[["隱","ㄧㄣˇ",[["藏匿，動",["「隱」姓埋名"]],["潛藏不露的，形",["「隱」情、「隱」疾"]]]],["穩","ㄨㄣˇ",[["固定不動搖的、安全的，形",["安「穩」、「穩」如泰山"]],["妥當的、妥貼的，形",["十拿九「穩」、「穩」當"]],["沉著不輕浮的，形",["「穩」健、「穩」重"]],["控制、使安定，動",["「穩」住情緒"]]]],["癮","ㄧㄣˇ",[["成為習慣而不易戒除的嗜好或癖好，名",["毒「癮」、酒「癮」"]]]]],[]],["蕩・盪・燙",[["蕩","ㄉㄤˋ",[["平坦的，形",["坦「蕩」"]],["閒逛，動",["街頭遊「蕩」"]],["搖動、擺動，動",["從流飄「蕩」、「蕩」舟"]],["毀壞，動",["「蕩」然無存"]],["清除、洗除、使殆盡，動",["傾家「蕩」產"]],["放縱不受拘束的，形",["浪「蕩」子、放「蕩」"]]]],["盪","ㄉㄤˋ",[["搖動、擺動，動",["「盪」鞦韆"]]]],["燙","ㄊㄤˋ",[["被高熱的東西或火所傷，名",["「燙」手山芋"]]]]],["燙手山芋：比喻棘手且各方皆不願接辦的事。"]],["漫・慢・幔・曼・蔓・謾",[["漫","ㄇㄢˋ",[["水滿而外溢，動",["其流波「漫」"]],["隨便地、胡亂地，副",["「漫」不經心、「漫」卷詩書喜欲狂"]],["放縱不受拘束的，形",["浪「漫」、散「漫」"]],["遍布的、充滿的，形",["「漫」山遍野、「漫」天大霧"]],["長的、遠的，形",["「漫漫」長夜、還望顧舊鄉，長路「漫」浩浩"]]]],["慢","ㄇㄢˋ",[["速度低的、不快的，形",["「慢」車、動作「慢」"]],["驕傲的、不禮貌的，動",["傲「慢」、輕「慢」"]],["從緩地、稍緩地，副",["且「慢」生氣"]]]],["幔","ㄇㄢˋ",[["布幕、帳幕，名",["窗「幔」、布「幔」"]]]],["曼","ㄇㄢˋ",[["美的、柔美的，形",["妙歌「曼」舞"]]]],["蔓","ㄇㄢˋ",[["延伸、滋長，動",["「蔓」延"]],["藤本或蔓性植物細長而能攀繞他物的莖，名",["藤「蔓」"]]]],["謾","ㄇㄢˋ",[["任意、隨便，通「漫」。亦作「漫罵」，動",["「謾」罵"]]]]],[]],["逆",[["逆","ㄋㄧˋ",[["心中沒有抵觸",["莫「逆」於心"]],["違背、不順從，動",["忤「逆」、忠言「逆」耳、不立異以為高，不「逆」情以干譽"]],["不順的，形",["身處「逆」境"]],["倒出的，形",["批其「逆」鱗"]],["反、倒，副",["倒行「逆」施"]],["背叛者，名",["討「逆」"]]]]],["莫逆於心：指情感一致，心意相投。","批其逆鱗：逆鱗，指龍喉下倒生的鱗片。批逆鱗引申為直言諍諫。","倒行逆施：不遵常理行事。後比喻違背社會俗尚，胡作非為的罪惡行徑。"]],["撼・憾・感",[["撼","ㄏㄢˋ",[["搖動，動",["「撼」動、震「撼」天地"]]]],["憾","ㄏㄢˋ",[["心中的怨恨或不完滿的感覺，名",["缺「憾」、「憾」事"]],["悔恨的、不滿意的，動",["遺「憾」、抱「憾」而終"]]]],["感","ㄍㄢˇ",[["受到外來刺激所引起的情緒反應，名",["百「感」交集"]]]]],[]],["質",[["質","ㄓˊ",[["樸實的本性，名",["文「質」彬彬"]],["人的天性稟賦，名",["資「質」"]],["事物的根本、特性，名",["特「質」、品「質」"]],["詰問，動",["「質」問犯人"]],["箭靶、標的，名",["是故「質」的張而弓矢至焉"]]]],["質","ㄓˋ",[["用財物或人作保證以為抵押，動",["「質」押"]],["被抵押的人或物，名",["人「質」"]]]]],[]],["彌",[["彌","ㄇㄧˊ",[["填補，動",["「彌」補"]],["更加，副",["日久「彌」新","欲蓋「彌」彰","「彌」足珍貴"]],["遍布地，副",["煙霧「彌」漫"]],["久地，副",["「彌」久"]]]]],["日久彌新：經過長久的時日，不但沒有衰敗、陳舊，反而更新、更好。指禁得起時間的考驗。","想要遮蓋掩飾反而更加顯明。如：「大家原本只是懷疑他而已，但他忙於辯解的樣子反而是欲蓋彌彰，不打自招。」。"]],["歷・曆",[["歷","ㄌㄧˋ",[["過去、已經過的，形",["「歷」史、「歷」屆"]],["經過，動",["「歷」盡滄桑、「歷」久彌新、「歷」劫"]],["分明的、清晰的，形",["「歷歷」在目、往事「歷歷」、晴川「歷歷」漢陽樹，春草萋萋鸚鵡洲"]],["過去的經驗，名",["學「歷」、履「歷」表"]]]],["曆","ㄌㄧˋ",[["記載年、月、日、節氣等的書冊，名",["行事「曆」、日「曆」"]],["年代、壽命，名",["周過其「曆」，秦不及期"]]]]],[]],["癒・渝・揄・逾・踰・瑜",[["癒","ㄩˋ",[["病好了。通「愈」、「瘉」，動",["治「癒」、痊「癒」、病「癒」"]]]],["渝","ㄩˊ",[["變更、改變，動",["信守不「渝」、此情不「渝」"]]]],["揄","ㄩˊ",[["嘲笑、戲弄，動",["揶「揄」"]]]],["逾","ㄩˊ",[["越過、超過。通「踰」，動",["年「逾」六十、「逾」牆、「逾」時不候"]]]],["踰","ㄩˊ",[["越過、超過。通「逾」，動",["「踰」矩、「踰」越"]]]],["瑜","ㄩˊ",[["美玉，名",["瑕不掩「瑜」","握瑾懷「瑜」"]]]]],["瑕不掩瑜：比喻事物雖有缺點，卻無損其整體的完美。","握瑾懷瑜：比喻懷有高貴的美德與才能。"]],["覬・覦・愉・喻",[["覬","ㄐㄧˋ",[["企求、冀求，動",["「覬」覦"]]]],["覦","ㄩˊ",[["企求、冀求，動",["覬「覦」"]]]],["愉","ㄩˊ",[["快樂的，高興的，形",["歡「愉」、「愉」悅"]]]],["喻","ㄩˋ",[["告知、說明。通「諭」，動",["曉「喻」、告「喻」"]],["知道、明白，動",["家「喻」戶曉、低頭獨長歎，此歎無人「喻」、不言而「喻」"]],["比方，動",["譬「喻」、比「喻」"]]]]],["覬覦：希望得到不該擁有的東西。","家喻戶曉：家家戶戶都知道，形容事情、名聲傳布極廣。","不言而喻：事理淺顯，不待說明即可曉悟。"]],["庵・掩・淹・醃・奄",[["庵","ㄢ",[["僧尼禮佛的小寺廟，名",["尼姑「庵」"]]]],["掩","ㄧㄢˇ",[["關閉，動",["虛「掩」房門"]],["遮蔽，動",["遮「掩」、「掩」飾、「掩」耳盜鈴"]]]],["淹","ㄧㄢ",[["浸漬，動",["水「淹」及膝"]]]],["醃","ㄧㄢ",[["用鹽、糖、酒等調味料浸漬食物，動",["「醃」漬水果"]]]],["奄","ㄧㄢˇ",[["氣息微弱將絕",["「奄奄」一息"]]]]],["掩耳盜鈴：比喻自欺欺人。","奄奄一息：僅存微弱的一口氣。形容生命或事物已到了最後時刻。"]],["距・鉅・拒・矩・炬",[["距","ㄐㄩˋ",[["相隔、相離，動",["相「距」"]],["相隔的長度，名",["「距」離"]]]],["鉅","ㄐㄩˋ",[["大的。通「巨」，形",["「鉅」變、「鉅」款"]]]],["拒","ㄐㄩˋ",[["不接受，動",["來者不「拒」、「拒」絕"]],["抵抗、抵禦，動",["抗「拒」、「拒」敵"]]]],["矩","ㄐㄩˇ",[["法則、常規，名",["循規蹈「矩」"]]]],["炬","ㄐㄩˋ",[["火把，名",["火「炬」","目光如「炬」"]]]]],["循規蹈矩：遵守禮法，不踰越法度。","目光如炬：比喻見事透澈，識見遠大。"]],["緘・咸・箴",[["緘","ㄐㄧㄢ",[["閉，動",["三「緘」其口"]],["量詞。計算信件的單位，名",["一「緘」幽信自襄陽，上報先生去歲亡"]],["書信，名",["開「緘」見手札，一紙十三行"]]]],["咸","ㄒㄧㄢˊ",[["都、皆、全，副",["老少「咸」宜"]]]],["箴","ㄓㄣ",[["規戒、勸諫，動",["「箴」言"]]]]],["三緘其口：言語謹慎或不說話。"]]];
+document.getElementById("tb").innerHTML=G.map(([t,rs,nt])=>`<h3>${t}</h3><div class="wrap"><table><tr><th>字</th><th>注音</th><th>釋義</th><th>詞語</th></tr>${rs.map(([c,y,ss])=>ss.map((s,i)=>`<tr>${i?"":`<td class="c" rowspan="${ss.length}">${c}</td><td class="y" rowspan="${ss.length}">${y}</td>`}<td><span class="m">${s[0]||"—"}</span></td><td>${s[1].join("、")||"—"}</td></tr>`).join("")).join("")}</table></div>${nt&&nt.length?`<div class="card note">${nt.map(x=>`<p>${x}</p>`).join("")}</div>`:""}`).join("");
 
-// ===== 互動測驗 =====
-var R=[];D.split("\n").forEach(function(l){if(l[0]=="#"){R.g=l.slice(1);return}var a=l.split("|");R.push({g:R.g,p:a[0],w:a[1],m:a[2]})});
-function sh(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
-function uniq(a){return a.filter(function(x,i){return a.indexOf(x)==i})}
-function pick(c,pool,n){var o=[c];sh(uniq(pool)).forEach(function(x){if(o.length<n&&x!=c&&o.indexOf(x)<0)o.push(x)});return sh(o)}
-function mk(){var qs=[];
- R.forEach(function(r){
-  var w=r.w.split(/[、／]/)[0],mm=w.match(/「(.)」/);
-  var sameP=R.filter(function(x){return x.g==r.g}).map(function(x){return x.p}),allP=R.map(function(x){return x.p});
-  if(mm&&r.p.indexOf("（")<0){var o=pick(r.p,sameP.concat(allP),4);if(o.length>=3)qs.push({q:"詞語「"+w.replace(/[「」]/g,"")+"」中的「"+mm[1]+"」，讀音是？",o:o,a:r.p})}
-  var mean=r.m.split("；")[0],sameM=R.filter(function(x){return x.g==r.g}).map(function(x){return x.m.split("；")[0]}),allM=R.map(function(x){return x.m.split("；")[0]});
-  if(mean.length>1&&mean.length<26&&mm){var o2=pick(mean,sameM.concat(allM),4);if(o2.length>=3)qs.push({q:"詞語「"+w.replace(/[「」]/g,"")+"」（"+mm[1]+"字），釋義是？",o:o2,a:mean})}
- });return sh(qs).slice(0,10)}
-var qz=document.getElementById("quiz"),sc=0,done=0;
-function render(){sc=0;done=0;var qs=mk(),h='<p id="sc">共 '+qs.length+' 題，點選答案即可立刻對答案。</p>';
- qs.forEach(function(q,i){h+='<div class="card"><b>'+(i+1)+'. '+q.q+'</b><div class="opts">';
-  q.o.forEach(function(o){h+='<button class="opt" data-c="'+(o==q.a?1:0)+'">'+o+'</button>'});h+='</div><div class="fb"></div></div>'});
- h+='<button id="again">換一批題目</button>';qz.innerHTML=h;
- qz.querySelectorAll(".card").forEach(function(c,i){c.querySelectorAll(".opt").forEach(function(b){b.onclick=function(){
-  if(c.dataset.d)return;c.dataset.d=1;done++;var ok=b.dataset.c=="1";if(ok)sc++;
-  c.querySelectorAll(".opt").forEach(function(x){if(x.dataset.c=="1")x.classList.add("ok")});if(!ok)b.classList.add("no");
-  c.querySelector(".fb").textContent=ok?"答對了！":"答案是：「"+qs[i].a+"」";
-  document.getElementById("sc").textContent="已作答 "+done+"／"+qs.length+"，答對 "+sc+" 題"}})});
- document.getElementById("again").onclick=render}
-render();
+const mk=document.getElementById("mk");
+mk.onclick=()=>{const on=document.body.classList.toggle("mask");mk.classList.toggle("on",on);document.querySelectorAll(".m").forEach(e=>e.classList.remove("on"))};
+document.addEventListener("click",e=>{if(document.body.classList.contains("mask")&&e.target.classList.contains("m"))e.target.classList.toggle("on")});
+
+// 測驗
+const sh=a=>[...a].sort(()=>Math.random()-.5);
+const Q=[];
+G.forEach(([t,rs])=>{
+ const ch=[...new Set(rs.map(r=>r[0]))],rd=[...new Set(rs.map(r=>r[1]))];
+ if(ch.length>1)rs.forEach(([c,y,ss])=>ss.forEach(([m,ws])=>ws.forEach(w=>Q.push({k:"z",w,c,m,opts:ch,ans:c}))));
+ if(rd.length>1)rs.forEach(([c,y,ss])=>{const w=ss.flatMap(s=>s[1])[0];if(w)Q.push({k:"y",w,c,opts:rd,ans:y})});
+ if(ch.length===1){const gl=[...new Set(rs.flatMap(r=>r[2]).map(s=>s[0]))];
+  if(gl.length>=3)rs.forEach(([c,y,ss])=>ss.forEach(([m,ws])=>ws.forEach(w=>Q.push({k:"m",w,c,opts:gl,ans:m}))));}
+});
+let ans=0,rt=0;
+function draw(){ans=rt=0;const qs=sh(Q).slice(0,10);document.getElementById("tot").textContent=qs.length;
+ document.getElementById("qs").innerHTML="";
+ qs.forEach((q,i)=>{const d=document.createElement("div");d.className="q";
+  const stem=q.k==="z"?`下列詞語「＿」內應填入哪一個字？<br><b>${q.w.replace(new RegExp("「"+q.c+"+」","g"),"「＿」")}</b>${q.m?`<br><span class="note">提示：${q.m}</span>`:""}`:q.k==="y"?`「${q.c}」字在<b>${q.w}</b>中的注音是？`:`下列詞語中「${q.c}」的意義為何？<br><b>${q.w}</b>`;
+  d.innerHTML=`<div>${i+1}. ${stem}</div>`;
+  const o=sh([q.ans,...sh(q.opts.filter(x=>x!==q.ans)).slice(0,3)]);
+  o.forEach(x=>{const b=document.createElement("button");b.className="o";b.textContent=x;
+   b.onclick=()=>{if(d.dataset.d)return;d.dataset.d=1;ans++;
+    if(x===q.ans){rt++;b.classList.add("ok")}else{b.classList.add("ng");[...d.querySelectorAll("button")].find(z=>z.textContent===q.ans).classList.add("ok")}
+    document.getElementById("an").textContent=ans;document.getElementById("rt").textContent=rt};
+   d.appendChild(b)});
+  document.getElementById("qs").appendChild(d)});
+ document.getElementById("an").textContent=0;document.getElementById("rt").textContent=0}
+document.getElementById("rq").onclick=draw;draw();
 </script></body></html>
